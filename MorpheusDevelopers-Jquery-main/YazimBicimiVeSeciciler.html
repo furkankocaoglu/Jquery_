@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <title>Başlarkene</title>
+        <style>
+            .kutu{color:red;}
+            .mavikutu{background-color:aqua;}
+        </style>
+    </head>
+    <body>
+        <button>Tıkla</button> 
+        <button id="btn_iki">Tıkla 2</button> 
+        <button id="btn_uc">Tıkla 3</button>
+        <button id="btn_dort">Tıkla 4</button>
+        <button id="btn_bes">Tıkla 5</button>
+        <button id="btn_alti">Tıkla 6</button>
+        <button id="btn_yedi">Tıkla 7</button>
+        <button id="btn_sekiz">Tıkla 8</button>
+        <button id="btn_dokuz">Tıkla 9</button>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam id voluptatibus odio mollitia praesentium fuga. Excepturi odit magni quis necessitatibus.</p>
+        <p id="p_iki">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam id voluptatibus odio mollitia praesentium fuga. Excepturi odit magni quis necessitatibus.</p>
+        <p class="kutu">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam id voluptatibus odio mollitia praesentium fuga. Excepturi odit magni quis necessitatibus.</p>
+        <p class="kutu">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam id voluptatibus odio mollitia praesentium fuga. Excepturi odit magni quis necessitatibus.</p>
+        <p class="mavikutu">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ex ad accusamus iusto tempore delectus, assumenda earum esse fuga officia?</p>
+        <p class="mavikutu">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ex ad accusamus iusto tempore delectus, assumenda earum esse fuga officia?</p>
+        <div class="mavikutu">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, itaque exercitationem ea beatae similique et optio facilis veniam magni, odio officia. Explicabo officiis vitae vero totam obcaecati quis rem culpa.</div>
+        <span>$("button") Etiket Seçici</span><br>
+        <span>$("#id") Etiket Seçici</span>
+        <span>$(".SinifAdi") Sınıf Seçici</span>
+        <ul class="liste">
+            <li>Eleman 1</li>
+            <li>Eleman 2</li>
+            <li>Eleman 3</li>
+            <li>Eleman 4</li>
+            <li>Eleman 5</li>
+        </ul>
+        <table border="1">
+            <tr>
+                <td>1</td>
+                <td>Murtaza</td>
+                <td>Şuayipoğlu</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Murtaza</td>
+                <td>Şuayipoğlu</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Murtaza</td>
+                <td>Şuayipoğlu</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Murtaza</td>
+                <td>Şuayipoğlu</td>
+            </tr>
+        </table>
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script>
+            /*
+                Şquery Kullanılırken komutlar $ ile başlar
+            */
+           $(document).ready(function() {
+                /*$("button").click(function(){
+                    $("p").hide();
+                });*/
+                $("#btn_iki").click(function(){
+                    $("#p_iki").hide();
+                });
+                $("#btn_uc").click(function(){
+                    $(".kutu").hide();
+                });
+                $("#btn_dort").click(function(){
+                    $("*").hide();
+                });
+                $("#btn_bes").click(function(){
+                    $(this).hide();
+                });
+                $("#btn_alti").click(function(){
+                    $("p.mavikutu").hide();
+                });
+                $("#btn_yedi").click(function(){
+                    $("p:first").hide();//ilk p etiketli eleman
+                });
+                $("#btn_sekiz").click(function(){
+                    //$("ul li:first").hide();//ilk li etiketli eleman
+                    $(".liste li:first").hide();
+                });
+                $("#btn_dokuz").click(function(){
+                    //$("tr:even").hide();
+                    $("tr:odd").css("background-color","#ededed");
+                });
+           });
+          
+        </script>
+    </body>
+</html>

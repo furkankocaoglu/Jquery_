@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>Başlarkene</title>
+    </head>
+    <body>
+        <h3>Click</h3>
+        <p id="p_bir">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, dolore. Harum vero neque nemo quidem explicabo aliquam iure distinctio pariatur.</p>
+        <h3>Double Click</h3>
+        <p id="p_iki">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, aut, culpa sequi nisi odio, minima magni ad illo incidunt nesciunt mollitia non libero commodi sint quia impedit dolor vero enim?</p>
+        <h3>Mouse Enter/leave</h3>
+        <p id="p_uc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, aut, culpa sequi nisi odio, minima magni ad illo incidunt nesciunt mollitia non libero commodi sint quia impedit dolor vero enim?</p>
+        <h3>Mouse Down</h3>
+        <p id="p_dort">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, aut, culpa sequi nisi odio, minima magni ad illo incidunt nesciunt mollitia non libero commodi sint quia impedit dolor vero enim?</p>
+        <h3>Mouse Up</h3>
+        <p id="p_bes">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, aut, culpa sequi nisi odio, minima magni ad illo incidunt nesciunt mollitia non libero commodi sint quia impedit dolor vero enim?</p>
+        <h3>Hover</h3>
+        <p id="p_alti">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, aut, culpa sequi nisi odio, minima magni ad illo incidunt nesciunt mollitia non libero commodi sint quia impedit dolor vero enim?</p>
+        <h3>Focus</h3>
+        <label>İsim:</label>
+        <input type="text" placeholder="İsim"><br>
+        <label>soyisim:</label>
+        <input type="text" placeholder="Soyisim">
+        <h3>On</h3>
+        <p id="p_yedi">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, aut, culpa sequi nisi odio, minima magni ad illo incidunt nesciunt mollitia non libero commodi sint quia impedit dolor vero enim?</p>
+        <h3>Çoklu Olay</h3>
+        <p id="p_sekiz">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, aut, culpa sequi nisi odio, minima magni ad illo incidunt nesciunt mollitia non libero commodi sint quia impedit dolor vero enim?</p>
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#p_bir").click(function(){
+                    $(this).hide();
+                });
+                $("#p_iki").dblclick(function(){
+                    $(this).hide();
+                });
+                $("#p_uc").mouseenter(function(){
+                    $(this).hide();
+                });
+                $("#p_uc").mouseleave(function(){
+                    alert("Hoççakalın Gittim Ben");
+                });
+                $("#p_dort").mousedown(function(){
+                    $(this).hide();
+                });
+                $("#p_bes").mouseup(function(){
+                    $(this).hide();
+                });
+                $("#p_alti").hover(function(){
+                     $(this).css("color","red");
+                }, function(){
+                    $(this).css("color","pink");
+                });
+                $("input").focus(function(){
+                    $(this).css("background-color","#cccccc");
+                });
+                $("input").blur(function(){
+                    $(this).css("background-color","#ffffff");
+                });
+                $("#p_yedi").on("click", function(){
+                    $(this).hide();
+                });
+                $("#p_sekiz").on({
+                    mouseenter:function(){
+                        $(this).css("background-color","deeppink");
+                    },
+                    mouseleave:function(){
+                        $(this).css("background-color","bisque");
+                    },
+                    click:function(){
+                        $(this).css("background-color","green");
+                    }
+                })
+            });
+        </script>
+    </body>
+</html>
