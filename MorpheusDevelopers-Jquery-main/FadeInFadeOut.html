@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>FadeIn / FadeOut</title>
+        <style>
+            #div_bir{
+                width: 200px;
+                height: 200px;
+                background-color: aqua;
+                display: none;
+            }
+            #div_iki{
+                width: 200px;
+                height: 200px;
+                background-color: bisque;
+                display: none;
+            }
+            #div_uc{
+                width: 200px;
+                height: 200px;
+                background-color: magenta;
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="div_bir"></div>
+        <div id="div_iki"></div>
+        <div id="div_uc"></div>
+        <button id="btn_fade">Havalı giriş Yap</button>
+        <button id="btn_fadeOut">Havalı çıkış Yap</button>
+        <button id="btn_FadeToggle">Fade Toggle</button>
+         <button id="btn_FadeTo">FadeTo</button>
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#btn_fade").click(function(){
+                   $("#div_bir").fadeIn(); 
+                   $("#div_iki").fadeIn("slow"); 
+                   $("#div_uc").fadeIn(5000); 
+                });
+                $("#btn_fadeOut").click(function(){
+                    $("#div_bir").fadeOut(); 
+                    $("#div_iki").fadeOut("fast"); 
+                    $("#div_uc").fadeOut(500); 
+                });
+                $("#btn_FadeToggle").click(function(){
+                    $("#div_bir").fadeToggle(); 
+                    $("#div_iki").fadeToggle("fast"); 
+                    $("#div_uc").fadeToggle(500); 
+                });
+                $("#btn_FadeTo").click(function(){
+                    $("#div_bir").fadeTo("slow", 0.5); 
+                    $("#div_iki").fadeTo("slow", 0.7); 
+                    $("#div_uc").fadeTo("slow",0.2); 
+                });
+            });
+        </script>
+    </body>
+</html>

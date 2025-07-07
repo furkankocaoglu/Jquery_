@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Hide / Show</title>
+        <style>
+            #p_ekran{
+                padding: 15px;
+                border-radius: 5px;
+                background-color: darkseagreen;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="p_ekran">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur illum libero necessitatibus exercitationem provident! Vel, optio repudiandae. Fuga tempora molestiae sed maxime! Cum laborum dolores sequi dolorem natus magnam ab.</p>
+        <button id="btn_gizle">Gizle</button>
+        <button id="btn_goster">Göster</button>
+        <button id="btn_toggle">Toggle</button>
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#btn_gizle").click(function(){
+                    $("#p_ekran").hide(1000, function(){
+                        //hide(süre,callback)
+                        alert("Bitti");
+                    });
+                });
+                $("#btn_goster").click(function(){
+                    $("#p_ekran").show(1000);
+                });
+                $("#btn_toggle").click(function(){
+                    $("#p_ekran").toggle(500);
+                })
+            });
+        </script>
+    </body>
+</html>

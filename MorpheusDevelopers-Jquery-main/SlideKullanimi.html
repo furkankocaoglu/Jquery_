@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>FadeIn / FadeOut</title>
+        <style>
+            h1,h2,h3,h4,h5,h6{margin: 0;padding: 0;}
+            body{
+                font-family: calibri;
+            }
+           .tasiyici{
+            width: 300px;
+           }
+           #baslik
+           {
+            padding: 10px;
+            background-color: silver;
+            color: white;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border: 1px solid dimgrey;
+            cursor: pointer;
+           }
+           #icerik
+           {
+            border: 1px solid dimgrey;
+            height: 250px;
+            border-top: none;
+            padding: 5px;
+            display: none;
+            
+           }
+        </style>
+    </head>
+    <body>
+        <button id="btn_dur"> X </button>
+        <div class="tasiyici">
+            <div id="baslik"><h3>Sıkça Sorulan Soru 1</h3></div>
+            <div id="icerik">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium suscipit cum temporibus, voluptates maxime nulla aliquid impedit necessitatibus maiores vero sapiente minus cupiditate repellat nisi provident ut, aspernatur autem consequatur delectus! Earum autem voluptas laborum reprehenderit, repudiandae quis id dolores, eveniet asperiores corporis perspiciatis saepe deleniti nam nobis dolore soluta?</div>
+        </div>
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#baslik").click(function(){
+                    //$("#icerik").slideDown("slow");
+                    //$("#icerik").slideUp();
+                    $("#icerik").slideToggle(5000);
+                });
+                $("#btn_dur").click(function(){
+                    $("#icerik").stop();
+                });
+            });
+        </script>
+    </body>
+</html>
